@@ -1,26 +1,27 @@
-/* --- Landing page full-screen fancy text --- */
-.landing {
+/* --- Background image for Paradise Nursery landing page --- */
+.background-image {
   height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #f8c8dc, #f3e6ff); /* pink-purple gradient */
   text-align: center;
-  padding: 0 2rem;
+  background: url('/images/landing-background.jpg') no-repeat center center;
+  background-size: cover;
 }
 
+/* Landing page fancy text */
 .landing-title {
-  font-family: 'Dancing Script', cursive; /* fancy cursive font */
-  font-size: 5rem; /* big text */
-  color: #7d5ba6; /* muted purple */
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: #7d5ba6;
   margin: 0;
 }
 
 .landing-subtitle {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
-  color: #5c3b7a; /* darker purple */
+  color: #5c3b7a;
   margin: 1rem 0 2rem;
 }
 
@@ -40,59 +41,31 @@
   transform: scale(1.05);
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar {
+/* Navbar styling */
+nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 16px 40px;
-  background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7, #66bb6a); /* funky mixed green gradient */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 0 0 12px 12px;
+  gap: 25px;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4caf50, #81c784); /* green gradient */
 }
 
-.logo {
-  font-family: 'Comic Neue', cursive; /* small & cute/funky */
-  font-size: 1.6rem; /* smaller than landing page */
-  color: #fff;
-  text-shadow: 1px 1px #2e7d32;
-  transform: rotate(-1deg); /* slight tilt for fun */
-}
-
-.nav-links {
-  display: flex;
-  gap: 28px; /* space between Home / Plants / Cart */
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #f0fff0;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.nav-links a:hover {
-  color: #c8f7c5;
-  transform: translateY(-2px) rotate(2deg);
-}
-
-/* Cart badge */
-.cart-count {
-  background: #2e7d32;
+nav a {
   color: white;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  margin-left: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* ---------- PRODUCTS ---------- */
+nav a:hover {
+  color: #dcedc8;
+}
+
+/* Product cards */
 .products {
   padding: 40px;
-  background: #f0fff0; /* soft green background */
+  background: #fdf7ff;
 }
 
 .grid {
@@ -105,13 +78,7 @@
   background: white;
   padding: 16px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(72, 187, 120, 0.25);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(72, 187, 120, 0.4);
+  box-shadow: 0 10px 25px rgba(180, 120, 220, 0.25);
 }
 
 .card img {
@@ -122,30 +89,35 @@
   border-radius: 14px;
 }
 
-/* ---------- CART PAGE ---------- */
+/* Cart page styling */
 .cart-page {
-  padding: 40px;
-  background: #f0fff0;
+  padding: 30px;
 }
 
-.cart-buttons {
+.cart-card {
   display: flex;
-  gap: 16px;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.cart-buttons button {
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 10px;
+.cart-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.qty {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+button {
   cursor: pointer;
-  background: linear-gradient(45deg, #4caf50, #81c784);
-  color: white;
-  font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.3s;
-}
-
-.cart-buttons button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.5);
 }
