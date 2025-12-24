@@ -1,5 +1,5 @@
-import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
@@ -27,7 +27,6 @@ const cartSlice = createSlice({
 
       state.totalPrice += newItem.price;
     },
-
     increaseQty(state, action) {
       const item = state.items.find(i => i.id === action.payload);
       item.quantity++;
@@ -35,7 +34,6 @@ const cartSlice = createSlice({
       state.totalQuantity++;
       state.totalPrice += item.price;
     },
-
     decreaseQty(state, action) {
       const item = state.items.find(i => i.id === action.payload);
       if (item.quantity > 1) {
@@ -45,7 +43,6 @@ const cartSlice = createSlice({
         state.totalPrice -= item.price;
       }
     },
-
     removeItem(state, action) {
       const item = state.items.find(i => i.id === action.payload);
       state.totalQuantity -= item.quantity;

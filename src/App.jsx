@@ -44,13 +44,16 @@ export default function App() {
                 ))
               )}
 
-              <h2>Total Cost: ₹{cart.totalPrice}</h2>
+              <h2>
+                Total Cost: ₹
+                {cart.items.reduce((sum, item) => sum + item.total, 0)}
+              </h2>
 
               <div className="cart-buttons">
                 <Link to="/products">
                   <button>Continue Shopping</button>
                 </Link>
-                <button>Checkout</button>
+                <button onClick={() => alert("Coming Soon!")}>Checkout</button>
               </div>
             </div>
           }

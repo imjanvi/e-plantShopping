@@ -1,21 +1,49 @@
-/* --- Background image for Paradise Nursery landing page --- */
-.background-image {
-  height: 100vh; /* full viewport height */
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.cart-count {
+  background-color: #fff;
+  color: #4caf50;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+/* LANDING / About Us */
+.about-us-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('/images/landing.jpg') no-repeat center center/cover;
   text-align: center;
-  background: url('/images/landing-background.jpg') no-repeat center center;
-  background-size: cover;
 }
 
-/* Landing page fancy text */
 .landing-title {
   font-family: 'Dancing Script', cursive;
   font-size: 5rem;
   color: #7d5ba6;
-  margin: 0;
 }
 
 .landing-subtitle {
@@ -25,44 +53,22 @@
   margin: 1rem 0 2rem;
 }
 
-.landing button {
+.about-us-container button {
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
-  background-color: #9b59b6; /* lavender */
+  background-color: #9b59b6;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
 }
 
-.landing button:hover {
+.about-us-container button:hover {
   background-color: #c49fcf;
   transform: scale(1.05);
 }
 
-/* Navbar styling */
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 25px;
-  padding: 1rem 2rem;
-  background: linear-gradient(90deg, #4caf50, #81c784); /* green gradient */
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-nav a:hover {
-  color: #dcedc8;
-}
-
-/* Product cards */
+/* PRODUCT LIST */
 .products {
   padding: 40px;
   background: #fdf7ff;
@@ -89,35 +95,47 @@ nav a:hover {
   border-radius: 14px;
 }
 
-/* Cart page styling */
+/* CART */
 .cart-page {
-  padding: 30px;
+  padding: 40px;
 }
 
 .cart-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
+  gap: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .cart-card img {
-  width: 200px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
-.qty {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
+.qty button {
+  padding: 5px 10px;
+  margin: 0 5px;
 }
 
-button {
+.cart-buttons {
+  margin-top: 20px;
+}
+
+.cart-buttons button {
+  margin-right: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #9b59b6;
+  color: white;
   cursor: pointer;
+}
+
+.cart-buttons button:hover {
+  background-color: #c49fcf;
 }
