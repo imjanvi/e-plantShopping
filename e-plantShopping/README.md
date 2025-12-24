@@ -1,16 +1,37 @@
-# React + Vite
+# e-plantShopping 🌱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based online plant shop application called **Paradise Nursery**. This project implements a shopping cart functionality for various houseplants.
 
-Currently, two official plugins are available:
+## Project Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Landing Page** with a large animated "Paradise Nursery" title and an **Explore Plants** button linking to the product listing.
+- **Navbar** with links to Home, Products, and Cart, with a dynamic cart count.
+- **Product Listing Page**
+  - Plants grouped into categories: Aromatic, Medicinal, and Air Purifier.
+  - Each plant card shows an image, name, description, price, and **Add to Cart** button.
+  - Buttons are disabled once a plant is added to the cart.
+- **Shopping Cart Page**
+  - Displays all items added to the cart.
+  - Each item card shows a thumbnail, unit price, total cost, quantity, and Delete button.
+  - Buttons to increase/decrease quantity update the cart dynamically.
+  - **Continue Shopping** button links back to products.
+  - **Checkout** button shows “Coming Soon”.
+- **Styling**
+  - Landing page with gradient background and fancy fonts.
+  - Product cards and navbar styled with colors and spacing.
+  - Green gradient navbar and pastel/purple theme for the app.
 
-## React Compiler
+## Installation & Running Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clone the repository
+git clone https://github.com/imjanvi/e-plantShopping.git
 
-## Expanding the ESLint configuration
+# Navigate to project folder
+cd e-plantShopping
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
